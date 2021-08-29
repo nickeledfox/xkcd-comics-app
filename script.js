@@ -7,6 +7,7 @@
  * 4. Add Previous/Next, First/Last and get Comic by ID functionality to the app
  * 5. Adjust UI states accordingly
  */
+
 class DomInterface {
   constructor() {
     this.form = document.querySelector('#comic-form');
@@ -72,20 +73,35 @@ class DomInterface {
 
 class RequestController {
   constructor() {
-    this.DomInterface = new DOMInterface();
+    this.DomInterface = new DomInterface();
     this.corsHeader = 'https://the-ultimate-api-challenge.herokuapp.com';
     this.opiUrl = 'https://xkcd.com';
     this.opiUrlFormat = 'info.0.json';
     this.superAgent = superagent;
 
-    this.getCurrentComix();
+    this.currentComicsNumber = 0;
+    this.maxComicsNumber = 0;
+
+    this.getCurrentComcs();
+    this.DomInterface.hideLoader();
   }
 
-  getCurrentComix() {
+  getMaxComocsNumber(number) {
+    this.maxComicsNumber = number;
+  }
+  setMaxComicsNumber(number) {
+    this.currentComicsNumber = number;
+  }
+
+  getCurrentComcs() {
     const requestUrl = `${this.corsHeader}/${this.opiUrl}/${this.opiUrlFormat}`;
 
     this.superAgent.get(requestUrl).end((error, responce) => {
-      console.log({ error, responce });
+      const data = responce.body;
+
+      this.DomInterface.showComics(data);
+      this.setCurrentComicsNumber = data.num;
+      this.setMaxComicsNumber = data.num;
     });
   }
 }
