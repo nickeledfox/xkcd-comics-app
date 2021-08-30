@@ -10,13 +10,12 @@ body {
 .main__container {
   margin: 0 auto;
   text-align: center;
-  background-color: #536872;
-  /* background: linear-gradient(90deg, snow 1px, #f0f0f0 1px); */
-  padding: 0 1rem;
+  background-color: #536878;
+  padding: 1rem;
 }
 .container {
   background: linear-gradient(90deg, snow 1px, #f0f0f0 1px);
-  padding: 2rem 0 1rem 0;
+  padding: 1rem 0;
   border-style: solid;
   border-width: 1.5px;
   border-color: #071419;
@@ -55,14 +54,6 @@ body {
   height: 50px;
   background-color: #343a3f;
   animation: flip 1s infinite;
-}
-#comic-form {
-  padding-bottom: 3rem;
-}
-.link {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
 }
 
 @keyframes flip {

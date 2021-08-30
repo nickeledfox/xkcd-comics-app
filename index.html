@@ -30,11 +30,11 @@
     </div>
 
     <main class="main__container">
-      <h1 class="main__title pt-5 mb-4">XKCD Comics</h1>
-
-      <span id="error"></span>
-
       <div class="container">
+        <h1 class="main__title mb-4">XKCD Comics</h1>
+
+        <span id="error"></span>
+
         <div>
           <button id="request-prev" class="btn btn-outline-dark mb-2">
             &lsaquo; Prev
@@ -60,27 +60,31 @@
         <h2 id="comic-title">Loading ...</h2>
         <img id="comic-image" class="img-fluid" />
         <div id="comic-date"></div>
-      </div>
 
-      <div class="pt-5 mb-4">
-        <h4 class="mb-3">Search Comics by ID</h4>
-        <form id="comic-form" class="form-inline d-flex justify-content-center">
-          <div>
-            <input
-              aria-label="find comics by ID"
-              type="number"
-              id="search-input"
-              class="form-control form-control-sm mr-3"
-              placeholder="Comics number"
-              required
-            />
-          </div>
-          <button type="submit" class="btn btn-sm btn-dark">find</button>
-        </form>
-        <span id="form-error"></span>
+        <div class="pt-5 mb-4">
+          <h4 class="mb-3">Search Comics by ID</h4>
+          <form
+            id="comic-form"
+            class="form-inline d-flex justify-content-center"
+          >
+            <div>
+              <input
+                aria-label="find comics by ID"
+                type="number"
+                id="search-input"
+                class="form-control form-control-sm mr-3"
+                placeholder="Comics number"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-sm btn-dark">find</button>
+          </form>
+          <span id="form-error"></span>
+        </div>
       </div>
     </main>
-    <div class="link">
+
+    <div class="d-flex justify-content-center mt-4 mb-1">
       <a href="https://xkcd.com/">Check xkcd home page</a>
     </div>
   </body>
