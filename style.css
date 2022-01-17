@@ -9,7 +9,6 @@ body {
 .main__container {
   margin: 0 auto;
   text-align: center;
-  background-color: #708090;
   padding: 1rem;
 }
 .container {
@@ -24,9 +23,7 @@ body {
 .paper__bacground {
   background: linear-gradient(90deg, snow 1px, #f0f0f0 1px);
 }
-.darker__bacground {
-  background-color: #536878;
-}
+
 .main__title {
   font-size: 4rem;
 }
